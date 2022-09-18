@@ -10,10 +10,15 @@ When we read a sentence, we are able to identify subject, object and other argum
 </p>
 
 
-
 In this work I will only focus on the last 2 tasks.
 
 ## Dataset
-
+The dataset I used to train my model is private, and provided by the [Sapienza NLP Group](https://github.com/SapienzaNLP). Dataset is in the ConLU format. Each sample in the dataset is a dictionary of the following attributes: 
+* Words: list of words used in the sentence
+* Tokens: list of tokens used in the sentence
+* Lemmas: list of the base form under which the word is entered
+* Predicate: list where each predicate has it's own meaning (predicate disambiguation)
+* PoS tags: list of the part of speech (such as verb, punctuation, noun, etc...)
+* SRL tags: list of the semantic role of each word / token
 
 
