@@ -29,12 +29,3 @@ sentence_id: {
 }
 ```
 
-* Words: list of words used in the sentence
-* Lemmas: list of the base form under which the word is entered
-* Dependency Head: syntattic information
-* 
-* Predicate: list where each predicate has it's own meaning (predicate disambiguation)
-* PoS tags: list of the part of speech (such as verb, punctuation, noun, etc...)
-* SRL tags: list of the semantic role of each word / token
-
-
