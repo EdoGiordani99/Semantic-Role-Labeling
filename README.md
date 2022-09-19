@@ -13,10 +13,26 @@ When we read a sentence, we are able to identify subject, object and other argum
 In this work I will only focus on the last 2 tasks.
 
 ## Dataset
-The dataset I used to train my model is private, and provided by the [Sapienza NLP Group](https://github.com/SapienzaNLP). Dataset is in the ConLU format. Each sample in the dataset is a dictionary of the following attributes: 
+The dataset I used to train my model is the UniteD-SRL (Tripodi et al., EMNLP 2021). This dataset is a private one and was provided by the [Sapienza NLP Group](https://github.com/SapienzaNLP). The dataset is a JSON file where each entry(each sample) is a dictionary containing the following fields:
+
+```python
+sentence_id: {
+    “words”: [“The”, “cat”, “ate”, “the”, “mouse”, “.”],
+    “lemmas”: [“the”, “cat”, “eat”, “the”, “mouse", “.”],
+    “pos_tags”: [“DET”, ..., “PUNCT”],
+    “dependency_relations”: [“NMOD”, ..., “ROOT”, ..., “P”],
+    “dependency_heads”: [1, 2, 0, ...],
+    “predicates”: [“_”, “_”, “EAT_BITE”, “_”, “_”, “_”],
+    “roles”: {
+        “2”: [“_”, “Agent”, “_”, “_”, “Patient”, “_”],
+    }
+}
+```
+
 * Words: list of words used in the sentence
-* Tokens: list of tokens used in the sentence
 * Lemmas: list of the base form under which the word is entered
+* Dependency Head: syntattic information
+* 
 * Predicate: list where each predicate has it's own meaning (predicate disambiguation)
 * PoS tags: list of the part of speech (such as verb, punctuation, noun, etc...)
 * SRL tags: list of the semantic role of each word / token
