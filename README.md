@@ -29,3 +29,14 @@ sentence_id: {
 }
 ```
 
+## Training
+Training can be simply done by using the provided **Google Colab** notebook *train-notebook.ipynb* (possibly using GPU). To train the model, simply follow these steps:
+
+1. First of all, clone this repository
+```python
+!git clone https://github.com/EdoGiordani99/Semantic-Role_Labeling.git
+```
+2. Set correctly the *config.py* file. In this file you should:
+    - MODEL_NAME: the name for saving the model
+    - LANGUAGE_MODEL_NAME: model of the pretrained bert model
+
